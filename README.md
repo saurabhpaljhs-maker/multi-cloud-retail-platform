@@ -1,38 +1,33 @@
 # Multi-Cloud Retail Platform
 
-**3+ Years Experience Level** Multi-Cloud DevOps Project using **Jenkins CI/CD**
+Production-grade **Multi-Cloud DevOps** project showcasing **3+ years of experience** as Multicloud DevOps Engineer (HCL Tech).
 
 ## Project Overview
-Yeh project real-time retail application (jaise POS system) ko multi-cloud environment mein deploy karta hai. Main isme **Terraform**, **Docker**, **Kubernetes** aur **Jenkins** use kiya hai.
+End-to-end automation for a Retail/POS application deployed across multiple clouds using Infrastructure as Code and CI/CD.
 
-## Key Responsibilities & Achievements
-- Modular Terraform code likh kar Azure, GCP aur AWS pe infrastructure provision kiya
-- End-to-End **Jenkins Pipeline** banaya (Build → Security Scan → Deploy)
-- Azure AKS cluster pe production-grade deployment automate kiya
-- Trivy se Docker image scanning implement kiya
-- Free tier resources ka optimization kiya
+## Key Achievements
+- Designed modular Terraform configurations for AWS, Azure & GCP
+- Implemented end-to-end CI/CD pipeline using GitHub Actions
+- Containerized and deployed microservice on Azure AKS & GCP GKE
+- Integrated security scanning (Trivy) in pipeline
+- Achieved automated deployments with zero manual intervention
 
 ## Tech Stack
-- **IaC**: Terraform (Multi-cloud modules)
-- **CI/CD**: Jenkins (Declarative Pipeline)
+- **IaC**: Terraform (Multi-Cloud Modules)
+- **CI/CD**: GitHub Actions
 - **Container**: Docker
-- **Orchestration**: Kubernetes (AKS)
-- **Clouds**: Azure (Primary), GCP & AWS (Secondary)
-- **App**: Node.js Express Retail Application
+- **Orchestration**: Kubernetes (AKS + GKE)
+- **Clouds**: Azure (Primary), GCP, AWS
+- **Application**: Node.js Retail App
 
-## Jenkins Pipeline Stages
-1. Code Checkout
-2. Docker Image Build
-3. Trivy Security Scan
-4. Push to Docker Hub
-5. Deploy to Azure AKS
+## Pipeline Features
+- Docker Build
+- Trivy Security Scan
+- Push to Docker Hub
+- Deploy to Azure AKS
 
-## How to Run
+## How to Deploy
 ```bash
-# Terraform
 cd terraform
 terraform init
 terraform apply
-
-# Jenkins
-# Create Pipeline job and point to this repository
