@@ -2,12 +2,15 @@ name: Multi-Cloud Retail CI/CD
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,16 +38,3 @@ jobs:
           docker push sauraabh/retail-app:${{ github.sha }}
           docker tag sauraabh/retail-app:${{ github.sha }} sauraabh/retail-app:latest
           docker push sauraabh/retail-app:latest
-
-      - name: Deploy to Azure AKS
-        uses: azure/aks-set-context@v4
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-          cluster-name: dev-retail-aks
-          resource-group: dev-retail-rg
-        continue-on-error: true
-
-      - name: Deploy Application
-        run: |
-          kubectl apply -f kubernetes/
-          kubectl set image deployment/retail-app retail=sauraabh/retail-app:${{ github.sha }} || true
