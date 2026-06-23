@@ -1,6 +1,13 @@
 {
-  "name": "retail-app",
+  "name": "multi-cloud-retail-app",
   "version": "1.0.0",
+  "description": "Retail Platform Backend - Multi-Cloud Demo",
   "main": "app.js",
-  "scripts": { "start": "node app.js" }
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"No tests yet\""
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
