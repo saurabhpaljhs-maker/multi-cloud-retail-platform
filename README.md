@@ -1,7 +1,5 @@
 # Multi-Cloud Retail Platform
 
-Production-grade **Multi-Cloud DevOps** project showcasing **3+ years of experience** as Multicloud DevOps Engineer (HCL Tech).
-
 ## Project Overview
 End-to-end automation for a Retail/POS application deployed across multiple clouds using Infrastructure as Code and CI/CD.
 
